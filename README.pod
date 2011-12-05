@@ -1,0 +1,5 @@
+=head1 Descrição
+Esses códigos são parte do Sistema de Protocolo Único da Prefeitura Municipal de Fortaleza.
+
+=head1 Licença
+GPL
