@@ -17,7 +17,7 @@
     </namespaces>
 
     <types>
-        <!-- Categoria de Processo -->
+        <!-- Tipo de Processo -->
         <type name="spu:tipoprocesso">
             <title>Tipo de Processo</title>
             <parent>cm:folder</parent>
@@ -74,7 +74,7 @@
                 <aspect>cm:versionable</aspect>
             </mandatory-aspects>
         </type>
-        <!-- Tipo de Processo -->
+        <!-- Assunto -->
         <type name="spu:assunto">
             <title>Assunto</title>
             <parent>cm:folder</parent>
