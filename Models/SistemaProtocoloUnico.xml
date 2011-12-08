@@ -367,6 +367,10 @@
                     <title>Observação do Manifestante</title>
                     <type>d:text</type>
                 </property>
+                <property name="spu:manifestante.Email">
+                    <title>Email do Manifestante</title>
+                    <type>d:text</type>
+                </property>
             </properties>
         </aspect>
         <!-- Arquivamento -->
@@ -383,6 +387,18 @@
                 </property>
                 <property name="spu:arquivamento.Local">
                     <title>Local do Arquivamento</title>
+                    <type>d:text</type>
+                </property>
+                <property name="spu:arquivamento.Estante">
+                    <title>Estante do Arquivamento</title>
+                    <type>d:text</type>
+                </property>
+                <property name="spu:arquivamento.Prateleira">
+                    <title>Prateleira Arquivamento</title>
+                    <type>d:text</type>
+                </property>
+                <property name="spu:arquivamento.Caixa">
+                    <title>Caixa Arquivamento</title>
                     <type>d:text</type>
                 </property>
                 <property name="spu:arquivamento.Pasta">
