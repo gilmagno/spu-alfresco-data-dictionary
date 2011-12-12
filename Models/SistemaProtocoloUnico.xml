@@ -389,20 +389,24 @@
                     <title>Local do Arquivamento</title>
                     <type>d:text</type>
                 </property>
+                <property name="spu:arquivamento.Arquivo">
+                    <title>Arquivo do Arquivamento</title>
+                    <type>d:text</type>
+                </property>
                 <property name="spu:arquivamento.Estante">
                     <title>Estante do Arquivamento</title>
                     <type>d:text</type>
                 </property>
                 <property name="spu:arquivamento.Prateleira">
-                    <title>Prateleira Arquivamento</title>
+                    <title>Prateleira do Arquivamento</title>
                     <type>d:text</type>
                 </property>
                 <property name="spu:arquivamento.Caixa">
-                    <title>Caixa Arquivamento</title>
+                    <title>Caixa do Arquivamento</title>
                     <type>d:text</type>
                 </property>
                 <property name="spu:arquivamento.Pasta">
-                    <title>Pasta Arquivamento</title>
+                    <title>Pasta do Arquivamento</title>
                     <type>d:text</type>
                 </property>
                 <property name="spu:arquivamento.Observacao">
