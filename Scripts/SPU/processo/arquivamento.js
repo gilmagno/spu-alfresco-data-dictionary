@@ -52,7 +52,7 @@ function getCaixaArquivo(offset, pageSize, filter, assuntoId) {
 	return processos
 }
 
-function arquivarProcesso(nodeId, despacho, statusArquivamento, motivo, local, pasta) {
+function arquivarProcesso(nodeId, despacho, statusArquivamento, motivo, localizacao) {
 	var processo = getNode(nodeId)
     despacho = (!despacho) ? null : despacho    
 
@@ -60,8 +60,12 @@ function arquivarProcesso(nodeId, despacho, statusArquivamento, motivo, local, p
     processo.properties['spu:processo.Despacho'] = despacho
     processo.properties['spu:arquivamento.Status'] = 'workspace://SpacesStore/' + statusArquivamento
     processo.properties['spu:arquivamento.Motivo'] = motivo
-    processo.properties['spu:arquivamento.Local'] = local
-    processo.properties['spu:arquivamento.Pasta'] = pasta
+    processo.properties['spu:arquivamento.Local'] = localizacao['local']
+    processo.properties['spu:arquivamento.Arquivo'] = localizacao['arquivo']
+    processo.properties['spu:arquivamento.Estante'] = localizacao['estante']
+    processo.properties['spu:arquivamento.Prateleira'] = localizacao['prateleira']
+    processo.properties['spu:arquivamento.Caixa'] = localizacao['caixa']
+    processo.properties['spu:arquivamento.Pasta'] = localizacao['pasta']
 	processo.save()
 
     /* Executa o Workflow */
@@ -72,13 +76,13 @@ function arquivarProcesso(nodeId, despacho, statusArquivamento, motivo, local, p
 	return processo
 }
 
-function arquivarProcessos(processosId, despacho, statusArquivamento, motivo, local, pasta) {	
+function arquivarProcessos(processosId, despacho, statusArquivamento, motivo, localizacao) {	
     var processos = new Array()
 	var processo
 	processosId = eval('(' + processosId + ')');
 
     for (i=0; i < processosId.length; i++) {
-		processo = arquivarProcesso(processosId[i], despacho, statusArquivamento, motivo, local, pasta)
+		processo = arquivarProcesso(processosId[i], despacho, statusArquivamento, motivo, localizacao)
 		processos.push(processo)
 	}
 	return processos
