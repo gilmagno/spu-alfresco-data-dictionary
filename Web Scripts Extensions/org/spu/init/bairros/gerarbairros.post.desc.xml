@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>Cria os Bairros do SPU</shortname>
+	<description>Cria Bairros a partir de um arquivo utilizados pelo Sistema de Protocolo Unico</description>
+	<url>/spu/gerar/bairros</url>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+</webscript>
+
