@@ -27,6 +27,23 @@ function getOrCreateSubCategory(categoryFather, categoryName) {
 	return desiredCategory
 }
 
+function criarBairros(estrutura){
+	var spu
+	var busca
+	busca = getChildCategoryByName(classification.getRootCategories("cm:generalclassifiable"), "SPU");
+	spu = (!busca) ? classification.createRootCategory("cm:generalclassifiable", "SPU") : busca;
+	
+	var bairros = getOrCreateSubCategory(spu, "Bairros");
+	
+	for (var i=0; i < estrutura.length(); i++) {
+		bairro = estrutura.get(i);  
+		getOrCreateSubCategory(bairros, bairro.get('nome'))
+	}
+	
+	return true
+}
+
+
 function criarTiposDocumentos(estrutura){
 	var spu
 	var busca
