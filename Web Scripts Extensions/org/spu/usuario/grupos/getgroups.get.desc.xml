@@ -3,7 +3,7 @@
 <shortname>Get groups</shortname>
 <description>Picks up all groups of the logged user</description>
 
-<url>/getGroups</url>
+<url>/usuario/grupos/get</url>
 
 <format default="json">extension</format>
 <authentication>user</authentication>

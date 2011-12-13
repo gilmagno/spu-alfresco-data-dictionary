@@ -1,5 +1,20 @@
 var grupos = people.getContainerGroups(person);
 
+var resultado = new Array()
+
+for (var i = 0; i < grupos.length - 1; i++) {
+    resultado.push(grupos[grupos.length - 1].properties.authorityName + ' > ' + grupos[i].properties.authorityName)
+}
+
+/*if(grupos.length > 2){
+    throw "Esse Usuario pertence a mais de dois grupos"
+}*/
+
+model.resultado = resultado //[[grupos[1].properties.authorityName, grupos[0].properties.authorityName].join(' > ') + "."]
+
+/*
+var grupos = people.getContainerGroups(person);
+
 function getRaiz(grupos) {
   maiorQtdFilhos = 0;
   raiz = null;
@@ -71,7 +86,7 @@ function adiciona_vetor_resultado(item, nivel, resultado) {
             resultado.vetor[i] = new Array()
           }
           resultado.vetor[i].push(item)
-          /* preenche o resto do vetor, para trás */
+          // preenche o resto do vetor, para trás
           if (resultado.vetor[i][nivel] == undefined) {
             for (var j = nivel - 1; j >= 0; j--) {
               resultado.vetor[i].unshift(resultado.vetor[i-1][j])
@@ -114,3 +129,5 @@ if (resultado.vetor_string && resultado.vetor_string.length == 0) {
 }
 
 model.resultado = resultado.vetor_string
+*/
+
