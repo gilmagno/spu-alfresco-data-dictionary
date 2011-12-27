@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>Insere metadados nos arquivos</shortname>
+    <description>Insere metadados nos arquivos</description>
+    <url>/spu/share/vinculardocumentos</url>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+    <format default="json">any</format>
+</webscript>
