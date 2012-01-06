@@ -15,7 +15,7 @@ function addFilterParam(jsonField, key, arrayToPush) {
 addFilterParam('numero', 'spu:processo.Numero', params)
 addFilterParam('assunto', 'spu:processo.Assunto', params)
 addFilterParam('proprietario', 'spu:processo.Proprietario', params)
-addFilterParam('protocolo', 'spu:processo.Protocolo', params)
+addFilterParam('protocolo', 'spu:processo.Destino', params)
 //addFilterParam('data', 'spu:processo.Data', params)
 addFilterParam('dataInicio', 'spu:processo.Data', params)
 addFilterParam('dataFim', 'spu:processo.Data', params)
