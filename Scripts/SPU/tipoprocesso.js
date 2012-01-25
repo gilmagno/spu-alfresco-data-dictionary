@@ -44,7 +44,7 @@ function getAssuntosPorTipoProcesso(idTipoProcesso) {
 	tipoProcesso = getTipoProcesso(idTipoProcesso);
 	var pathTipoProcesso = tipoProcesso.getQnamePath();
 	var assuntos = search.luceneSearch(
-		"workspace://SpacesStore", 'PATH:"' + pathTipoProcesso + '/*" AND TYPE:"spu:assunto"'
+		"workspace://SpacesStore", 'PATH:"' + pathTipoProcesso + '/*" AND TYPE:"spu:assunto"', '@cm:name', true
 	);
 	return assuntos;
 }
