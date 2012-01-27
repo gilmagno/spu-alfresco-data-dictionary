@@ -34,6 +34,7 @@ if (fileName == undefined || fileContent == undefined) {
     } else {
         uploadedFile = node.createFile(fileName)
         //uploadedFile.addAspect('cm:versionable') // pensar sobre versionable
+        uploadedFile.addAspect('spu:anexo');
 
         /*var props = new Array();
         props['spu:tipoDocumento.nivel1'] = 'nodeRef de category';
@@ -48,7 +49,7 @@ if (fileName == undefined || fileContent == undefined) {
 
         if (tipoDocumentoNodeRef) {
             upFileNode = search.findNode(uploadedFile.nodeRef);
-            upFileNode.properties['spu:tipo-documento'] = search.findNode(tipoDocumentoNodeRef);
+            upFileNode.properties['spu:anexo.TipoDocumento'] = search.findNode(tipoDocumentoNodeRef);
             upFileNode.save();
         }
     }
