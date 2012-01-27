@@ -176,8 +176,6 @@
             </properties>
             <mandatory-aspects>
                 <aspect>cm:versionable</aspect>
-                <aspect>spu:manifestante</aspect>
-                <aspect>spu:arquivamento</aspect>
             </mandatory-aspects>
         </type>
         <!-- Formulario -->
@@ -426,6 +424,15 @@
                 <property name="spu:folhas.Volumes">
                     <title>Volumes</title>
                     <type>d:text</type>
+                </property>
+            </properties>
+        </aspect>
+        <aspect name="spu:anexo">
+            <title>Anexo</title>
+            <properties>
+                <property name="spu:anexo.TipoDocumento">
+                    <title>Tipo de Documento</title>
+                    <type>d:category</type>
                 </property>
             </properties>
         </aspect>
