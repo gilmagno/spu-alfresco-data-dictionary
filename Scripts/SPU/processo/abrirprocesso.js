@@ -26,9 +26,10 @@ function gerarNumeroProcesso(sigla) {
     var hora = zeroFill(new Date().getHours(), 2)
     var minuto = zeroFill(new Date().getMinutes(), 2)
     var segundo = zeroFill(new Date().getSeconds(), 2)
+    var milisegundo = zeroFill(new Date().getMilliseconds(), 3)
     var ano = new Date().getFullYear()
 
-    return sigla + dia + mes + hora + minuto + segundo + "/" + ano;
+    return sigla + dia + mes + hora + minuto + segundo + milisegundo + "/" + ano;
 }
 
 function abrirProcesso() {}
