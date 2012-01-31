@@ -436,5 +436,14 @@
                 </property>
             </properties>
         </aspect>
+        <aspect name="spu:documentosarquivados">
+            <title>Documentos Arquivados</title>
+            <properties>
+                <property name="spu:documentosarquivados.TipoDocumentoArquivados">
+                    <title>Tipo de Documento Arquivados</title>
+                    <type>d:category</type>
+                </property>
+            </properties>
+        </aspect>
     </aspects>
 </model>
