@@ -57,7 +57,8 @@ function criarTiposProcessoAssunto(tipoProcesso, letra, assunto, envolvidos, tra
     /* Pasta "Tipos de Processo" */
     var pastaRaiz = getOrCreateFolder(dataDictionary, 'Tipos de Processo')
     
-    var processoName = tipoProcesso.replace("/", "-").replace(":", "-") 
+    var processoName = tipoProcesso.replace("/", "-").replace(":", "-")
+    processoName = processoName.replace("¿","--"); 
     var result = getOrCreateTipoProcesso(pastaRaiz, processoName, tipoProcesso, letra)
 
     var env = new Array()
@@ -74,6 +75,7 @@ function criarTiposProcessoAssunto(tipoProcesso, letra, assunto, envolvidos, tra
     result.properties['spu:tipoprocesso.Simples'] = false
     result.save()
     var assuntoName = assunto.replaceAll("/", "-").replace(":", "-")
+    assuntoName = assuntoName.replace("¿","--");
     result = getOrCreateAssunto(result, assuntoName, assunto)
     return result
 }
